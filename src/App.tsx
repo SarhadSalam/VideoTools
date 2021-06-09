@@ -1,11 +1,10 @@
 import React from 'react';
+import Navbar from './features/navbar/navbar';
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <span>Learn </span>
-      </header>
+      <Navbar />
     </div>
   );
 };

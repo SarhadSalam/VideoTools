@@ -20,14 +20,14 @@
     "prettier"
   ],
   "rules": {
-    "prettier/prettier": "error",
-    "block-scoped-var": "error",
+    "prettier/prettier": "warn",
+    "block-scoped-var": "warn",
     "eqeqeq": "error",
     "no-var": "error",
     "prefer-const": "error",
     "eol-last": "error",
-    "prefer-arrow-callback": "error",
-    "no-trailing-spaces": "error",
+    "prefer-arrow-callback": "warn",
+    "no-trailing-spaces": "warn",
     "quotes": [
       "warn",
       "single",
