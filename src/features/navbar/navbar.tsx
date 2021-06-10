@@ -5,17 +5,20 @@ import {grey} from '@ant-design/colors';
 import {DownOutlined, UpOutlined} from '@ant-design/icons';
 import menuItems from '../../config/menuItem';
 import {MenuItem} from '../../interfaces/menu';
+import UI_COMPONENT_MEASUREMENTS from '../../config/measurements';
 
 const useStyles = createUseStyles({
   navbarContainer: {
     backgroundColor: grey[5],
-    maxHeight: '64px',
-    height: '64px',
+    maxHeight: UI_COMPONENT_MEASUREMENTS.navbar,
+    height: UI_COMPONENT_MEASUREMENTS.navbar,
+    width: '100%',
   },
   dropdownButton: {
     height: '100%',
-    boxShadow: false,
-    borderColor: false,
+    boxShadow: 'unset',
+    borderColor: 'inherit',
+    border: 'none',
   },
 });
 

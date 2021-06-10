@@ -7,17 +7,21 @@ import * as serviceWorker from './serviceWorker';
 
 import 'antd/dist/antd.dark.css';
 import './css/global.css';
+import {loadLoggerState} from './features/logging/loggerSlice';
+import {setStatusState} from './features/status/statusSlice';
+
+store.dispatch(setStatusState({status: 'loading'}));
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
-    <App />
-    {/* </Provider> */}
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+store.dispatch(loadLoggerState());
+// store.dispatch(setStatusState({status: 'idle'}));
+
 serviceWorker.register();
